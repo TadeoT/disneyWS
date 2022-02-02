@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Personaje.belongsTo(models.Pelicula,{
-        foreignKey: 'id',
-        targetKey: 'pelicula_id'
+        foreignKey: 'pelicula_id',
+        targetKey: 'id'
       })
     }
   }
@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     edad: DataTypes.INTEGER,
     peso: DataTypes.FLOAT,
     historia: DataTypes.STRING,
+    pelicula_id: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Personaje',

@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'pelicula_id'
       })
       Pelicula.belongsTo(models.Genero, {
-        foreignKey: 'id',
-        targetKey: 'genero_id'
+        foreignKey: 'genero_id',
+        targetKey: 'id'
       })
     }
   }
@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     imagen: DataTypes.STRING,
     fecha_creacion: DataTypes.DATE,
     calificacion: DataTypes.FLOAT,
+    genero_id: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'Pelicula',
