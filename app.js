@@ -23,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/personaje', personajeRouter);
-app.use('/pelicula', peliculaRouter);
+app.use('/characters', personajeRouter);
+app.use('/movies', peliculaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
